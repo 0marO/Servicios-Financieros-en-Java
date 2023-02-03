@@ -1,6 +1,8 @@
 package modelo.Accounts;
 
 import java.util.LinkedList;
+import modelo.AccountTransaction.AccountTransaction;
+import modelo.Reports.Report;
 
 public abstract class Account {
 

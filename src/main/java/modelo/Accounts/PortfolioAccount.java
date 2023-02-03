@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Set;
 
+import modelo.AccountTransaction.AccountTransaction;
+import modelo.Reports.Report;
 
 public class PortfolioAccount extends Account{
 
@@ -67,7 +69,7 @@ public class PortfolioAccount extends Account{
 
     @Override
     void accept(Report aReport) {
-        aReport.processProtfolio(this);
+        aReport.processPortfolio(this);
     }
 
     @Override
