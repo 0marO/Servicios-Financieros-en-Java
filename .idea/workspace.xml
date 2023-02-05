@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added Account abstract Class and PortfolioAccount subclass&#10;&#10;This model was originally coded in smalltalk. &#10;This is an adaptation to Java.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/AccountTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/Deposit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/TransferDepositLeg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/TransferLeg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/TransferWithdrawLeg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/Withdraw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/AccountSummaryReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/Report.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Transfer/Transfer.java" afterDir="false" />
+    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added majority of the original model. Different Report subclasses and general tests remain to be added.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/NetTransferReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/PortfolioDetailedTreePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/PortfolioTreePrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Accounts/PortfolioAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Reports/AccountSummaryReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/AccountSummaryReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Reports/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/Report.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -43,13 +42,115 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "settings.editor.selected.configurable": "editor.preferences.appearance"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="modelo.Accounts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PortfolioAccountTest.test08PortfolioTransactionsIncludesAllItsAccountsTransactions">
+    <configuration name="PortfolioAccountTest.test04PortfolioWithoutAccountsHasNoRegisteredTransaction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Accounts" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
+      <option name="METHOD_NAME" value="test04PortfolioWithoutAccountsHasNoRegisteredTransaction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioAccountTest.test05PortfolioHasRegisteredItsAccountsTransactions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Accounts" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
+      <option name="METHOD_NAME" value="test05PortfolioHasRegisteredItsAccountsTransactions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioAccountTest.test06PortfolioLooksForRegisteredTransactionsRecursively" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Accounts" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
+      <option name="METHOD_NAME" value="test06PortfolioLooksForRegisteredTransactionsRecursively" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioAccountTest.test07PortfolioHasNoTransactionWhenHasNoAccounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Accounts" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
+      <option name="METHOD_NAME" value="test07PortfolioHasNoTransactionWhenHasNoAccounts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioAccountTest.test08PortfolioTransactionsIncludesAllItsAccountsTransactions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Accounts" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
+      <option name="METHOD_NAME" value="test08PortfolioTransactionsIncludesAllItsAccountsTransactions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PortfolioAccountTest.test08PortfolioTransactionsIncludesAllItsAccountsTransactions" />
+        <item itemvalue="JUnit.PortfolioAccountTest.test07PortfolioHasNoTransactionWhenHasNoAccounts" />
+        <item itemvalue="JUnit.PortfolioAccountTest.test06PortfolioLooksForRegisteredTransactionsRecursively" />
+        <item itemvalue="JUnit.PortfolioAccountTest.test05PortfolioHasRegisteredItsAccountsTransactions" />
+        <item itemvalue="JUnit.PortfolioAccountTest.test04PortfolioWithoutAccountsHasNoRegisteredTransaction" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675388202553</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added majority of the original model. Different Report subclasses and general tests remain to be added.">
+      <created>1675457150004</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675457150005</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,6 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Account abstract Class and PortfolioAccount subclass&#10;&#10;This model was originally coded in smalltalk. &#10;This is an adaptation to Java." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Account abstract Class and PortfolioAccount subclass&#10;&#10;This model was originally coded in smalltalk. &#10;This is an adaptation to Java." />
+    <MESSAGE value="Added majority of the original model. Different Report subclasses and general tests remain to be added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added majority of the original model. Different Report subclasses and general tests remain to be added." />
   </component>
 </project>

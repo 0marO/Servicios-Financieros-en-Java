@@ -17,7 +17,7 @@ public abstract class Account {
     public abstract boolean isComposedBy(Account anAccount);
 
     // PRIVATE FOR PACKAGE
-    void accept(Report aReport) {
+    public void accept(Report aReport) {
         return;
     }
     void addTransactionsTo(LinkedList<AccountTransaction> aListOfTransactions){

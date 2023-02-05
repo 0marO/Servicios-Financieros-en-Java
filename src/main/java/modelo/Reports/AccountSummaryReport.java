@@ -31,8 +31,8 @@ public class AccountSummaryReport extends Report{
     }
 
     //RESULT
-    public String yieldResultAsString(){
-        return result.toString();
+    public LinkedList<String> yieldResult(){
+        return result;
     }
 
     //DD

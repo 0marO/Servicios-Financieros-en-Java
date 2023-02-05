@@ -8,7 +8,7 @@ import modelo.Accounts.Account;
 import modelo.Accounts.PortfolioAccount;
 import modelo.Accounts.ReceptiveAccount;
 
-
+// (VISITOR CLASS)
 public abstract class Report {
 
     // como no puedo poner un return type generico para "yieldResult" este método será implementado

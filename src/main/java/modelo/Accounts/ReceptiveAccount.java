@@ -65,7 +65,7 @@ public class ReceptiveAccount extends Account{
     // PACKAGE PRIVATE
 
     @Override
-    void accept(Report aReport) {
+    public void accept(Report aReport) {
         aReport.processReceptiveAccount(this);
     }
 

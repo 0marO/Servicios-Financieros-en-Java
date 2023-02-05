@@ -68,7 +68,7 @@ public class PortfolioAccount extends Account{
 
 
     @Override
-    void accept(Report aReport) {
+    public void accept(Report aReport) {
         aReport.processPortfolio(this);
     }
 
