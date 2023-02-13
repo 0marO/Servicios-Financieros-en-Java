@@ -28,11 +28,19 @@ public class PortfolioAccount extends Account{
         this("",null,null);
     }
     public PortfolioAccount(String aName, Account anAccount, Account anotherAccount){
-        accounts = new LinkedList<Account>();
-        parents = new LinkedList<PortfolioAccount>();
+        accounts = new LinkedList<>();
+        parents = new LinkedList<>();
         name = aName;
-        if (anAccount != null){accounts.add(anAccount);}
-        if (anotherAccount != null){accounts.add(anotherAccount);}
+        if (anAccount != null){
+            try {
+                this.add(anAccount);
+            }catch (Exception e) {}
+        }
+        if (anotherAccount != null){
+            try {
+                this.add(anotherAccount);
+            }catch (Exception e) {} 
+        }
     }
 
 
@@ -42,9 +50,8 @@ public class PortfolioAccount extends Account{
     @Override
     public int balance() {
         int sum = 0;
-        Iterator<Account> it = accounts.iterator();
-        while(it.hasNext()){
-            sum += it.next().balance();
+        for (Account account : accounts) {
+            sum += account.balance();
         }
         return sum;
     }
@@ -61,7 +68,7 @@ public class PortfolioAccount extends Account{
 
     @Override
     public LinkedList<AccountTransaction> transactions() {
-        LinkedList<AccountTransaction> transactions= new LinkedList<AccountTransaction>();
+        LinkedList<AccountTransaction> transactions= new LinkedList<>();
         accounts.forEach(anAccount -> anAccount.addTransactionsTo(transactions));
         return transactions;
     }
@@ -85,8 +92,12 @@ public class PortfolioAccount extends Account{
         return accounts.stream().anyMatch(account -> account == anAccount);
     }
 
-    public boolean accountsIsEmpty(){return accounts.isEmpty();}
-    public  int accountsSize(){return accounts.size();}
+    public boolean accountsIsEmpty(){
+        return accounts.isEmpty();
+    }
+    public  int accountsSize(){
+        return accounts.size();
+    }
 
     public void add(Account accountToAdd) throws Exception{
         if (assertCanAdd(accountToAdd)){
@@ -107,10 +118,14 @@ public class PortfolioAccount extends Account{
 
     @Override
     public boolean isComposedBy(Account anAccount) {
-        return this == anAccount ||
-                accounts.stream()
-                        .anyMatch(composedAccount -> composedAccount.isComposedBy(anAccount)
-                                || anAccount.isComposedBy(composedAccount));
+        if (this == anAccount)
+            return true;
+        if (!accounts.isEmpty()) {
+            return  accounts.stream()
+                            .anyMatch(composedAccount -> composedAccount.isComposedBy(anAccount)
+                                        || anAccount.isComposedBy(composedAccount));
+        }
+        return false;
     }
 
     void addRootParentsTo(Set<Account> rootParents){
@@ -120,7 +135,7 @@ public class PortfolioAccount extends Account{
             parents.forEach(aParent -> aParent.addRootParentsTo(rootParents));
     }
     Set<Account> getRootParents(){
-        Set<Account> rootParents = new HashSet<Account>();
+        Set<Account> rootParents = new HashSet<>();
         this.addRootParentsTo(rootParents);
         return rootParents;
     }
@@ -129,8 +144,6 @@ public class PortfolioAccount extends Account{
     }
 
     boolean assertCanAdd(Account accountToAdd){
-        if (this.anyRootParentsIsComposedBy(accountToAdd))
-            return false;
-        return true;
+        return !this.anyRootParentsIsComposedBy(accountToAdd);
     }
 }

@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class PortfolioAccountTest {
 
     @Test
-    void balanceOfPortfoliowithoutAccountsisZero(){
+    void test01balanceOfPortfoliowithoutAccountsisZero(){
         assertEquals(new PortfolioAccount().balance(),0);
     }
 
     @Test
-    void balanceOfPortfolioWithOneAccountIsAccountBalance() {
+    void test02balanceOfPortfolioWithOneAccountIsAccountBalance() {
         ReceptiveAccount account = new ReceptiveAccount();
         Deposit.createAndRegisterOn(100, account);
         PortfolioAccount portfolio = new PortfolioAccount("",account,null);
@@ -25,7 +25,7 @@ class PortfolioAccountTest {
     }
 
     @Test
-    void balanceOfPortfolioIsCalculatedRecursivelyOnPortfolios() throws Exception {
+    void test03balanceOfPortfolioIsCalculatedRecursivelyOnPortfolios() throws Exception {
         ReceptiveAccount simplePortfolioAccount = new ReceptiveAccount();
         Deposit.createAndRegisterOn(100, simplePortfolioAccount);
 
@@ -94,50 +94,116 @@ class PortfolioAccountTest {
     }
 
     @Test
-    void accept() {
+    void test09PortfolioTransactionsAreCalculatedRecursively() {
+        ReceptiveAccount simpleReceptiveAccount = new ReceptiveAccount();
+        Deposit simpleReceptiveAccountDeposit = Deposit.createAndRegisterOn(100, simpleReceptiveAccount);
+        PortfolioAccount simplePortfolio = PortfolioAccount.createNamed("", simpleReceptiveAccount);
+
+        ReceptiveAccount composedReceptiveAccount = new ReceptiveAccount();
+        Deposit composedReceptiveAccountDeposit = Deposit.createAndRegisterOn(50, composedReceptiveAccount);
+        PortfolioAccount composedPortfolio = PortfolioAccount.createNamed("", simplePortfolio
+                                                                    ,composedReceptiveAccount);
+
+        LinkedList<AccountTransaction> transactions = composedPortfolio.transactions();
+
+        assertEquals(2, transactions.size());
+        assertTrue(transactions.contains(simpleReceptiveAccountDeposit));
+        assertTrue(transactions.contains(composedReceptiveAccountDeposit));
     }
 
     @Test
-    void addTransactionsTo() {
+    void test10PortfolioCanNotIncludeTheSameAccountMoreThanOnce() {
+        ReceptiveAccount account = new ReceptiveAccount();
+        PortfolioAccount portfolio = PortfolioAccount.createNamed("", account);
+
+        try{
+            portfolio.add(account);
+            fail();
+        }catch (Exception e) {
+            assertEquals("Cannot add already registered account to the portfolio", e.getMessage());
+            assertEquals(1, portfolio.accountsSize());
+            assertTrue(portfolio.accountsIncludes(account));
+        }
     }
 
     @Test
-    void accountsIncludes() {
+    void test11PortfolioCanNotIncludeAccountOfItsPortfolios() {
+        ReceptiveAccount account = new ReceptiveAccount();
+        PortfolioAccount simplePortfolio = PortfolioAccount.createNamed("", account);
+        PortfolioAccount composedPortfolio = PortfolioAccount.createNamed("", simplePortfolio);
+
+        try{
+            composedPortfolio.add(account);
+            fail();
+        }catch (Exception e) {
+            assertEquals("Cannot add already registered account to the portfolio", e.getMessage());
+            assertEquals(1, composedPortfolio.accountsSize());
+            assertTrue(composedPortfolio.accountsIncludes(simplePortfolio));
+        }
     }
 
     @Test
-    void accountsIsEmpty() {
+    void test12PortfolioCanNotIncludeItself() {
+        ReceptiveAccount account = new ReceptiveAccount();
+        PortfolioAccount portfolio = PortfolioAccount.createNamed("", account);
+
+        try{
+            portfolio.add(portfolio);
+            fail();
+        }catch (Exception e) {
+            assertEquals("Cannot add already registered account to the portfolio", e.getMessage());
+            assertEquals(1, portfolio.accountsSize());
+            assertTrue(portfolio.accountsIncludes(account));
+        }
     }
 
     @Test
-    void accountsSize() {
+    void test13ComposedPortfolioCanNotHaveParentPortfolioAccount() {
+        ReceptiveAccount account = new ReceptiveAccount();
+        PortfolioAccount simplePortfolio = new PortfolioAccount();
+        PortfolioAccount composedPortfolio = PortfolioAccount.createNamed("", simplePortfolio, account);
+
+        try{
+            simplePortfolio.add(account);
+            fail();
+        }catch (Exception e) {
+            assertEquals("Cannot add already registered account to the portfolio", e.getMessage());
+            assertTrue(simplePortfolio.accountsIsEmpty());
+        }
     }
 
     @Test
-    void add() {
+    void test14ComposedPortfolioCanNotHaveAccountOfAnyRootParentRecursively() {
+        ReceptiveAccount account = new ReceptiveAccount();
+        PortfolioAccount portfolio = new PortfolioAccount();
+
+        PortfolioAccount leftParentPortfolio = PortfolioAccount.createNamed("",portfolio);
+        PortfolioAccount leftRootParentPortfolio = PortfolioAccount.createNamed("",leftParentPortfolio, account);
+
+        PortfolioAccount RightParentPortfolio = PortfolioAccount.createNamed("",portfolio);
+        PortfolioAccount RightRootParentPortfolio = PortfolioAccount.createNamed("",leftParentPortfolio, account);
+
+        try {
+            portfolio.add(account);
+        }catch (Exception e){
+            assertEquals("Cannot add already registered account to the portfolio", e.getMessage());
+            assertTrue(portfolio.accountsIsEmpty());
+        }
+
     }
 
     @Test
-    void addedTo() {
-    }
+    void test15PortfolioCanNotIncludeAnyOfTheComposedAccountOfPortfolioToAdd() {
 
-    @Test
-    void isComposedBy() {
-    }
-
-    @Test
-    void addRootParentsTo() {
-    }
-
-    @Test
-    void getRootParents() {
-    }
-
-    @Test
-    void anyRootParentsIsComposedBy() {
-    }
-
-    @Test
-    void assertCanAdd() {
+        ReceptiveAccount sharedAccount = new ReceptiveAccount();
+        PortfolioAccount portfolioToModify = new PortfolioAccount();
+        PortfolioAccount rootPortfolio = PortfolioAccount.createNamed("", sharedAccount,portfolioToModify);
+        PortfolioAccount portfolioToAdd = PortfolioAccount.createNamed("", sharedAccount);
+        try {
+            portfolioToModify.add(portfolioToAdd);
+        }catch (Exception e){
+            assertEquals("Cannot add already registered account to the portfolio", e.getMessage());
+            assertTrue(portfolioToModify.accountsIsEmpty());
+        }
     }
 }
