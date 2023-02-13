@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Finished Portfolio tests. 15/15 passed.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Accounts/ReceptiveAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelo/Accounts/PortfolioAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelo/Accounts/PortfolioAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
       <recent name="modelo.Accounts" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PortfolioAccountTest">
+  <component name="RunManager" selected="JUnit.ReceptiveAccountTest">
     <configuration name="PortfolioAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
@@ -64,54 +65,6 @@
       <option name="PACKAGE_NAME" value="modelo.Accounts" />
       <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortfolioAccountTest.test12PortfolioCanNotIncludeItself" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Accounts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
-      <option name="METHOD_NAME" value="test12PortfolioCanNotIncludeItself" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortfolioAccountTest.test13ComposedPortfolioCanNotHaveParentPortfolioAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Accounts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
-      <option name="METHOD_NAME" value="test13ComposedPortfolioCanNotHaveParentPortfolioAccount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortfolioAccountTest.test14ComposedPortfolioCanNotHaveAccountOfAnyRootParentRecursively" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Accounts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
-      <option name="METHOD_NAME" value="test14ComposedPortfolioCanNotHaveAccountOfAnyRootParentRecursively" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,13 +85,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReceptiveAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Accounts" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.ReceptiveAccountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReceptiveAccountTest.test04WithdrawValueMustBePositive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Accounts" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.ReceptiveAccountTest" />
+      <option name="METHOD_NAME" value="test04WithdrawValueMustBePositive" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReceptiveAccountTest.test07AccountKnowsItsTransactions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Accounts" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.ReceptiveAccountTest" />
+      <option name="METHOD_NAME" value="test07AccountKnowsItsTransactions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReceptiveAccountTest" />
+        <item itemvalue="JUnit.ReceptiveAccountTest.test07AccountKnowsItsTransactions" />
+        <item itemvalue="JUnit.ReceptiveAccountTest.test04WithdrawValueMustBePositive" />
         <item itemvalue="JUnit.PortfolioAccountTest" />
         <item itemvalue="JUnit.PortfolioAccountTest.test15PortfolioCanNotIncludeAnyOfTheComposedAccountOfPortfolioToAdd" />
-        <item itemvalue="JUnit.PortfolioAccountTest.test14ComposedPortfolioCanNotHaveAccountOfAnyRootParentRecursively" />
-        <item itemvalue="JUnit.PortfolioAccountTest.test13ComposedPortfolioCanNotHaveParentPortfolioAccount" />
-        <item itemvalue="JUnit.PortfolioAccountTest.test12PortfolioCanNotIncludeItself" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675563037612</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished Portfolio tests. 15/15 passed.">
+      <created>1676299491254</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676299491255</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,5 +199,16 @@
     <MESSAGE value="Added all report classes and started to write the tests." />
     <MESSAGE value="Finished Portfolio tests. 15/15 passed." />
     <option name="LAST_COMMIT_MESSAGE" value="Finished Portfolio tests. 15/15 passed." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/modelo/Accounts/ReceptiveAccountTest.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

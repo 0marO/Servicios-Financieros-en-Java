@@ -59,7 +59,9 @@ public class ReceptiveAccount extends Account{
 
     @Override
     public LinkedList<AccountTransaction> transactions() {
-        return null;
+        if (transactions.isEmpty())
+            return null;
+        return transactions;
     }
 
     // PACKAGE PRIVATE

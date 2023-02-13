@@ -39,7 +39,7 @@ public class PortfolioAccount extends Account{
         if (anotherAccount != null){
             try {
                 this.add(anotherAccount);
-            }catch (Exception e) {} 
+            }catch (Exception e) {}
         }
     }
 
