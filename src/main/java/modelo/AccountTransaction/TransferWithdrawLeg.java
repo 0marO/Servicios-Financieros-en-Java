@@ -22,7 +22,7 @@ public class TransferWithdrawLeg extends TransferLeg{
     //BALANCE
     @Override
     public void affectBalance(AtomicInteger aBalance) {
-        aBalance.addAndGet(-value);
+        aBalance.addAndGet(-this.getValue());
     }
     //DD
     @Override

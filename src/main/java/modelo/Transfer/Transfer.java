@@ -10,14 +10,36 @@ public class Transfer {
     private TransferDepositLeg depositLeg;
     private TransferWithdrawLeg withdrawLeg;
 
-    public static Transfer createFor(int anAmount, ReceptiveAccount originAccount, ReceptiveAccount destinationAccount){
-        // HERE GOES THE ASSERTION CAN CREATE
+    private static boolean assertTheAmountCanBeTransferedToDestinationFromOrigin(int anAmount,
+                                                                              ReceptiveAccount destinationAccount,
+                                                                              ReceptiveAccount originAccount) {
+        return assertCanTransferToDestinationFromOrigin(destinationAccount,originAccount)
+                && assertCanTransferTheAmount(anAmount);
+    }
+
+    private static boolean assertCanTransferTheAmount(int anAmount) {
+        return anAmount != 0;
+    }
+
+    private static boolean assertCanTransferToDestinationFromOrigin(ReceptiveAccount destinationAccount, ReceptiveAccount originAccount) {
+        return originAccount != destinationAccount;
+    }
+
+    public static Transfer createFor(int anAmount,
+                                     ReceptiveAccount originAccount,
+                                     ReceptiveAccount destinationAccount) throws Exception{
+
+        if (!assertTheAmountCanBeTransferedToDestinationFromOrigin(anAmount, destinationAccount,originAccount))
+            throw new Exception("Cannot make this transaction!"); // Falta especificación de errores
+
         Transfer transfer = new Transfer();
         TransferWithdrawLeg withdrawLeg = TransferWithdrawLeg.createOfATransferOn(transfer,originAccount);
         TransferDepositLeg depositLeg = TransferDepositLeg.createOfATransferOn(transfer,destinationAccount);
         transfer.conformTransfer(anAmount,withdrawLeg,depositLeg);
         return transfer;
     }
+
+
 
     private Transfer(){
     }

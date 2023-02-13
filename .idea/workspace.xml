@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Finished Portfolio tests. 15/15 passed.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Accounts/ReceptiveAccountTest.java" afterDir="false" />
+    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added and finished Portfolio tests. 7/7 passed.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Transfer/TransferTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/TransferDepositLeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/TransferDepositLeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/TransferWithdrawLeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/AccountTransaction/TransferWithdrawLeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Transfer/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Transfer/Transfer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,41 +51,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="modelo.Transfer" />
       <recent name="modelo.Accounts" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReceptiveAccountTest">
-    <configuration name="PortfolioAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Accounts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortfolioAccountTest.test15PortfolioCanNotIncludeAnyOfTheComposedAccountOfPortfolioToAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Accounts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Accounts" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Accounts.PortfolioAccountTest" />
-      <option name="METHOD_NAME" value="test15PortfolioCanNotIncludeAnyOfTheComposedAccountOfPortfolioToAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TransferTest">
     <configuration name="ReceptiveAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
@@ -132,13 +103,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TransferTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Transfer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Transfer" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Transfer.TransferTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransferTest.test01ATransferDecreasesBalanceFromOriginAccountAndIncreasesItForDestinationAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Transfer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Transfer" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Transfer.TransferTest" />
+      <option name="METHOD_NAME" value="test01ATransferDecreasesBalanceFromOriginAccountAndIncreasesItForDestinationAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TransferTest" />
+        <item itemvalue="JUnit.TransferTest.test01ATransferDecreasesBalanceFromOriginAccountAndIncreasesItForDestinationAccount" />
         <item itemvalue="JUnit.ReceptiveAccountTest" />
         <item itemvalue="JUnit.ReceptiveAccountTest.test07AccountKnowsItsTransactions" />
         <item itemvalue="JUnit.ReceptiveAccountTest.test04WithdrawValueMustBePositive" />
-        <item itemvalue="JUnit.PortfolioAccountTest" />
-        <item itemvalue="JUnit.PortfolioAccountTest.test15PortfolioCanNotIncludeAnyOfTheComposedAccountOfPortfolioToAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676299491255</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added and finished Portfolio tests. 7/7 passed.">
+      <created>1676300317880</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676300317880</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,17 +207,7 @@
     <MESSAGE value="Added majority of the original model. Different Report subclasses and general tests remain to be added." />
     <MESSAGE value="Added all report classes and started to write the tests." />
     <MESSAGE value="Finished Portfolio tests. 15/15 passed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Portfolio tests. 15/15 passed." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/modelo/Accounts/ReceptiveAccountTest.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added and finished Portfolio tests. 7/7 passed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and finished Portfolio tests. 7/7 passed." />
   </component>
 </project>
