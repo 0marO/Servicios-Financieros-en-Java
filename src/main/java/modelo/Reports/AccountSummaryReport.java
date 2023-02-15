@@ -27,7 +27,7 @@ public class AccountSummaryReport extends Report{
     }
 
     private String parsedStringForBalanceOf(Account anAccount){
-        return new String("Balance = "+ anAccount.balance()+ "\n");
+        return new String("Balance = "+ anAccount.balance());
     }
 
     //RESULT

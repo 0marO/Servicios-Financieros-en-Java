@@ -17,7 +17,7 @@ class AccountSummaryReportTest {
     void test01SummaryOfAccountWithNoTransactionsHasBalanceOf0Pesos() {
         ReceptiveAccount account = new ReceptiveAccount();
         LinkedList<String> expectedResult = new LinkedList<>();
-        expectedResult.add("Balance = 0\n");
+        expectedResult.add("Balance = 0");
         AccountSummaryReport aReport = AccountSummaryReport.generateFor(account);
 
         assertEquals(expectedResult, aReport.yieldResult());
@@ -30,7 +30,7 @@ class AccountSummaryReportTest {
 
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Depósito por 100\n");
-        expectedReport.add("Balance = 100\n");
+        expectedReport.add("Balance = 100");
 
         AccountSummaryReport report = AccountSummaryReport.generateFor(account);
 
@@ -46,7 +46,7 @@ class AccountSummaryReportTest {
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Depósito por 100\n");
         expectedReport.add("Depósito por 10\n");
-        expectedReport.add("Balance = 110\n");
+        expectedReport.add("Balance = 110");
         AccountSummaryReport report = AccountSummaryReport.generateFor(account);
 
         assertEquals(expectedReport,report.yieldResult());
@@ -60,7 +60,7 @@ class AccountSummaryReportTest {
 
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Extracción por 100\n");
-        expectedReport.add("Balance = -100\n");
+        expectedReport.add("Balance = -100");
         AccountSummaryReport report = AccountSummaryReport.generateFor(account);
 
         assertEquals(expectedReport,report.yieldResult());
@@ -76,7 +76,7 @@ class AccountSummaryReportTest {
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Extracción por 100\n");
         expectedReport.add("Extracción por 50\n");
-        expectedReport.add("Balance = -150\n");
+        expectedReport.add("Balance = -150");
         AccountSummaryReport report = AccountSummaryReport.generateFor(account);
 
         assertEquals(expectedReport,report.yieldResult());
@@ -95,7 +95,7 @@ class AccountSummaryReportTest {
 
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Salida por transferencia de 100\n");
-        expectedReport.add("Balance = -100\n");
+        expectedReport.add("Balance = -100");
         AccountSummaryReport report = AccountSummaryReport.generateFor(account);
 
         assertEquals(expectedReport,report.yieldResult());
@@ -116,7 +116,7 @@ class AccountSummaryReportTest {
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Salida por transferencia de 100\n");
         expectedReport.add("Salida por transferencia de 200\n");
-        expectedReport.add("Balance = -300\n");
+        expectedReport.add("Balance = -300");
         AccountSummaryReport report = AccountSummaryReport.generateFor(account);
 
         assertEquals(expectedReport,report.yieldResult());
@@ -135,7 +135,7 @@ class AccountSummaryReportTest {
 
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Entrada por transferencia de 100\n");
-        expectedReport.add("Balance = 100\n");
+        expectedReport.add("Balance = 100");
         AccountSummaryReport report = AccountSummaryReport.generateFor(recipientAccount);
 
         assertEquals(expectedReport,report.yieldResult());
@@ -156,7 +156,7 @@ class AccountSummaryReportTest {
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Entrada por transferencia de 100\n");
         expectedReport.add("Entrada por transferencia de 200\n");
-        expectedReport.add("Balance = 300\n");
+        expectedReport.add("Balance = 300");
         AccountSummaryReport report = AccountSummaryReport.generateFor(recipientAccount);
 
         assertEquals(expectedReport,report.yieldResult());
@@ -177,7 +177,7 @@ class AccountSummaryReportTest {
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Entrada por transferencia de 100\n");
         expectedReport.add("Entrada por transferencia de 200\n");
-        expectedReport.add("Balance = 300\n");
+        expectedReport.add("Balance = 300");
         AccountSummaryReport report = AccountSummaryReport.generateFor(recipientAccount);
 
         assertEquals(expectedReport,report.yieldResult());
@@ -193,7 +193,7 @@ class AccountSummaryReportTest {
 
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Depósito por 100\n");
-        expectedReport.add("Balance = 100\n");
+        expectedReport.add("Balance = 100");
 
         AccountSummaryReport report = AccountSummaryReport.generateFor(portfolio);
 
@@ -213,7 +213,7 @@ class AccountSummaryReportTest {
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Depósito por 100\n");
         expectedReport.add("Depósito por 200\n");
-        expectedReport.add("Balance = 300\n");
+        expectedReport.add("Balance = 300");
 
         AccountSummaryReport report = AccountSummaryReport.generateFor(portfolio);
 
@@ -230,7 +230,7 @@ class AccountSummaryReportTest {
 
         LinkedList<String> expectedReport = new LinkedList<>();
         expectedReport.add("Depósito por 100\n");
-        expectedReport.add("Balance = 100\n");
+        expectedReport.add("Balance = 100");
 
         AccountSummaryReport report = AccountSummaryReport.generateFor(parentPortfolio);
 

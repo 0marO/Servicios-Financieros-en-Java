@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added and finished AccountSummaryReport tests. 13/13 passed.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Reports/NetTransferReportTest.java" afterDir="false" />
+    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added and finished NetTransferReport tests. 10/10 passed.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Reports/PortfolioDetailedTreePrinterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Reports/AccountSummaryReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/AccountSummaryReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Reports/PortfolioDetailedTreePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/PortfolioDetailedTreePrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelo/Reports/AccountSummaryReportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelo/Reports/AccountSummaryReportTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +58,22 @@
       <recent name="modelo.Accounts" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.NetTransferReportTest">
+  <component name="RunManager" selected="JUnit.AccountSummaryReportTest">
+    <configuration name="AccountSummaryReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Reports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Reports" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.AccountSummaryReportTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NetTransferReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
@@ -69,7 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetTransferReportTest.test07CanGenerateReportForPortfolioWithChildAccountWithARegisteredOriginOfTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PortfolioDetailedTreePrinterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -78,14 +98,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
-      <option name="METHOD_NAME" value="test07CanGenerateReportForPortfolioWithChildAccountWithARegisteredOriginOfTransfer" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioDetailedTreePrinterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioDetailedTreePrinterTest.test08CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfolio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Reports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Reports" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioDetailedTreePrinterTest" />
+      <option name="METHOD_NAME" value="test08CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfolio" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetTransferReportTest.test08CanGenerateReportForPortfolioWithChildAccountWithARegisteredEndOfTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PortfolioDetailedTreePrinterTest.test09CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfoliowithChildReceptiveAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -94,40 +129,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
-      <option name="METHOD_NAME" value="test08CanGenerateReportForPortfolioWithChildAccountWithARegisteredEndOfTransfer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NetTransferReportTest.test09CanGenerateReportForPortfolioWithChildAccountWithTwoRegisteredEndOfTransfers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Reports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
-      <option name="METHOD_NAME" value="test09CanGenerateReportForPortfolioWithChildAccountWithTwoRegisteredEndOfTransfers" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NetTransferReportTest.test10CanGenerateReportForPortfolioWithChilPortfolioThatHasAChildAccountWithOneRegisteredTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Reports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
-      <option name="METHOD_NAME" value="test10CanGenerateReportForPortfolioWithChilPortfolioThatHasAChildAccountWithOneRegisteredTransfer" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioDetailedTreePrinterTest" />
+      <option name="METHOD_NAME" value="test09CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfoliowithChildReceptiveAccount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountSummaryReportTest" />
         <item itemvalue="JUnit.NetTransferReportTest" />
-        <item itemvalue="JUnit.NetTransferReportTest.test10CanGenerateReportForPortfolioWithChilPortfolioThatHasAChildAccountWithOneRegisteredTransfer" />
-        <item itemvalue="JUnit.NetTransferReportTest.test09CanGenerateReportForPortfolioWithChildAccountWithTwoRegisteredEndOfTransfers" />
-        <item itemvalue="JUnit.NetTransferReportTest.test08CanGenerateReportForPortfolioWithChildAccountWithARegisteredEndOfTransfer" />
-        <item itemvalue="JUnit.NetTransferReportTest.test07CanGenerateReportForPortfolioWithChildAccountWithARegisteredOriginOfTransfer" />
+        <item itemvalue="JUnit.PortfolioDetailedTreePrinterTest" />
+        <item itemvalue="JUnit.PortfolioDetailedTreePrinterTest.test09CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfoliowithChildReceptiveAccount" />
+        <item itemvalue="JUnit.PortfolioDetailedTreePrinterTest.test08CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfolio" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676481455090</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added and finished NetTransferReport tests. 10/10 passed.">
+      <created>1676482500597</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676482500597</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,6 +233,7 @@
     <MESSAGE value="Added and finished Portfolio tests. 7/7 passed." />
     <MESSAGE value="Added and finished Transfer tests. 6/6 passed." />
     <MESSAGE value="Added and finished AccountSummaryReport tests. 13/13 passed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added and finished AccountSummaryReport tests. 13/13 passed." />
+    <MESSAGE value="Added and finished NetTransferReport tests. 10/10 passed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and finished NetTransferReport tests. 10/10 passed." />
   </component>
 </project>

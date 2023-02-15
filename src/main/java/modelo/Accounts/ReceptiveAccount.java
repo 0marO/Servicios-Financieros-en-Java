@@ -27,7 +27,7 @@ public class ReceptiveAccount extends Account{
 
     //MAIN PROTOCOL
     public String getName() {
-        return "name";
+        return name;
     }
 
     public LinkedList<AccountTransaction> getTransactions(){

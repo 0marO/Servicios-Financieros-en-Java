@@ -45,7 +45,7 @@ public class PortfolioAccount extends Account{
 
 
     public String getName() {
-        return "name";
+        return name;
     }
     @Override
     public int balance() {
@@ -63,6 +63,8 @@ public class PortfolioAccount extends Account{
 
     @Override
     public void iterateElementsForReport(Report aReport) {
+        if (accounts.isEmpty())
+            return;
         accounts.forEach(anAccount -> anAccount.accept(aReport));
     }
 

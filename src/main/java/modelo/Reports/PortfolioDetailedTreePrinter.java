@@ -59,7 +59,7 @@ public class PortfolioDetailedTreePrinter extends Report{
         return AccountSummaryReport.generateFor(aReceptiveAccount).yieldResult();
     }
     private void generateAndAddToResultIndentedStringOfBalanceFrom(PortfolioAccount aPortfolio){
-        result.add("  Balance = " + aPortfolio.balance());
+        result.add(" Balance = " + aPortfolio.balance());
     }
     private void indentAccountSummaryReportResultOf(ReceptiveAccount aReceptiveAccount){
         this.accountSummaryReportResultFor(aReceptiveAccount).forEach(aName ->
@@ -67,8 +67,14 @@ public class PortfolioDetailedTreePrinter extends Report{
     }
 
     private void indentTemporaryResult(){
+        if (result.isEmpty())
+            return;
         LinkedList<String> indentedNamesAndTransactions = new LinkedList<>();
         result.forEach(aName -> indentedNamesAndTransactions.add(" " + aName));
         result = indentedNamesAndTransactions;
+    }
+
+    public LinkedList<String> yieldResult() {
+        return result;
     }
 }
