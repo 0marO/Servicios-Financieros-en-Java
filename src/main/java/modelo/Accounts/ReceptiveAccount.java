@@ -40,7 +40,8 @@ public class ReceptiveAccount extends Account{
         if (!transactions.isEmpty()){
             transactions.forEach(transaction -> transaction.affectBalance(currentBalance));
         }
-        return Math.max(currentBalance.get(), 0);
+        //return Math.max(currentBalance.get(), 0);
+        return currentBalance.get();
     }
 
     @Override
