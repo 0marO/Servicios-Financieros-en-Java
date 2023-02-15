@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added and finished Transfer tests. 6/6 passed.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Reports/AccountSummaryReportTest.java" afterDir="false" />
+    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added and finished AccountSummaryReport tests. 13/13 passed.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Reports/NetTransferReportTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +53,8 @@
       <recent name="modelo.Accounts" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountSummaryReportTest.test13SummaryOfParentPortfolioWithChildPortfolioAndAccountHasDepositOfAccountAndBalance">
-    <configuration name="AccountSummaryReportTest.test08SummaryOfAccountThatReceivedATransferHasTransferLegAndBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.NetTransferReportTest">
+    <configuration name="NetTransferReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -64,14 +63,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.AccountSummaryReportTest" />
-      <option name="METHOD_NAME" value="test08SummaryOfAccountThatReceivedATransferHasTransferLegAndBalance" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NetTransferReportTest.test07CanGenerateReportForPortfolioWithChildAccountWithARegisteredOriginOfTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Reports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Reports" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
+      <option name="METHOD_NAME" value="test07CanGenerateReportForPortfolioWithChildAccountWithARegisteredOriginOfTransfer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountSummaryReportTest.test09SummaryOfAccountThatReceivedMultipleTransferencesHasTransferLegsAndBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NetTransferReportTest.test08CanGenerateReportForPortfolioWithChildAccountWithARegisteredEndOfTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -80,14 +94,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.AccountSummaryReportTest" />
-      <option name="METHOD_NAME" value="test09SummaryOfAccountThatReceivedMultipleTransferencesHasTransferLegsAndBalance" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
+      <option name="METHOD_NAME" value="test08CanGenerateReportForPortfolioWithChildAccountWithARegisteredEndOfTransfer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountSummaryReportTest.test11SummaryOfPortfolioWithAnAccountWithDepositHasDepositAndBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NetTransferReportTest.test09CanGenerateReportForPortfolioWithChildAccountWithTwoRegisteredEndOfTransfers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -96,14 +110,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.AccountSummaryReportTest" />
-      <option name="METHOD_NAME" value="test11SummaryOfPortfolioWithAnAccountWithDepositHasDepositAndBalance" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
+      <option name="METHOD_NAME" value="test09CanGenerateReportForPortfolioWithChildAccountWithTwoRegisteredEndOfTransfers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountSummaryReportTest.test12SummaryOfPortfolioWithMultipleAccountsHasDepositsOfAccountsAndBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NetTransferReportTest.test10CanGenerateReportForPortfolioWithChilPortfolioThatHasAChildAccountWithOneRegisteredTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -112,24 +126,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.AccountSummaryReportTest" />
-      <option name="METHOD_NAME" value="test12SummaryOfPortfolioWithMultipleAccountsHasDepositsOfAccountsAndBalance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountSummaryReportTest.test13SummaryOfParentPortfolioWithChildPortfolioAndAccountHasDepositOfAccountAndBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Reports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.AccountSummaryReportTest" />
-      <option name="METHOD_NAME" value="test13SummaryOfParentPortfolioWithChildPortfolioAndAccountHasDepositOfAccountAndBalance" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
+      <option name="METHOD_NAME" value="test10CanGenerateReportForPortfolioWithChilPortfolioThatHasAChildAccountWithOneRegisteredTransfer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountSummaryReportTest.test13SummaryOfParentPortfolioWithChildPortfolioAndAccountHasDepositOfAccountAndBalance" />
-        <item itemvalue="JUnit.AccountSummaryReportTest.test12SummaryOfPortfolioWithMultipleAccountsHasDepositsOfAccountsAndBalance" />
-        <item itemvalue="JUnit.AccountSummaryReportTest.test11SummaryOfPortfolioWithAnAccountWithDepositHasDepositAndBalance" />
-        <item itemvalue="JUnit.AccountSummaryReportTest.test09SummaryOfAccountThatReceivedMultipleTransferencesHasTransferLegsAndBalance" />
-        <item itemvalue="JUnit.AccountSummaryReportTest.test08SummaryOfAccountThatReceivedATransferHasTransferLegAndBalance" />
+        <item itemvalue="JUnit.NetTransferReportTest" />
+        <item itemvalue="JUnit.NetTransferReportTest.test10CanGenerateReportForPortfolioWithChilPortfolioThatHasAChildAccountWithOneRegisteredTransfer" />
+        <item itemvalue="JUnit.NetTransferReportTest.test09CanGenerateReportForPortfolioWithChildAccountWithTwoRegisteredEndOfTransfers" />
+        <item itemvalue="JUnit.NetTransferReportTest.test08CanGenerateReportForPortfolioWithChildAccountWithARegisteredEndOfTransfer" />
+        <item itemvalue="JUnit.NetTransferReportTest.test07CanGenerateReportForPortfolioWithChildAccountWithARegisteredOriginOfTransfer" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676302578695</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added and finished AccountSummaryReport tests. 13/13 passed.">
+      <created>1676481455090</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676481455090</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +222,7 @@
     <MESSAGE value="Finished Portfolio tests. 15/15 passed." />
     <MESSAGE value="Added and finished Portfolio tests. 7/7 passed." />
     <MESSAGE value="Added and finished Transfer tests. 6/6 passed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added and finished Transfer tests. 6/6 passed." />
+    <MESSAGE value="Added and finished AccountSummaryReport tests. 13/13 passed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and finished AccountSummaryReport tests. 13/13 passed." />
   </component>
 </project>
