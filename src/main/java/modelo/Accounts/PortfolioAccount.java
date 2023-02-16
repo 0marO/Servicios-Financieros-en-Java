@@ -1,7 +1,6 @@
 package modelo.Accounts;
 
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Set;
 
@@ -34,12 +33,12 @@ public class PortfolioAccount extends Account{
         if (anAccount != null){
             try {
                 this.add(anAccount);
-            }catch (Exception e) {}
+            }catch (Exception ignored) {}
         }
         if (anotherAccount != null){
             try {
                 this.add(anotherAccount);
-            }catch (Exception e) {}
+            }catch (Exception ignored) {}
         }
     }
 
@@ -88,9 +87,6 @@ public class PortfolioAccount extends Account{
 
     // ACCOUNTS MANAGEMENT
     public boolean accountsIncludes(Account anAccount){
-        // si == no funciona debo definir .equals().
-        // Igualmente la logica es que pregunte por una cuenta existente en memoria por lo tanto
-        // si "anAccount" y account apuntan a la misma posición de memoria este método funciona.
         return accounts.stream().anyMatch(account -> account == anAccount);
     }
 
