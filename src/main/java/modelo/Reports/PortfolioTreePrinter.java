@@ -49,7 +49,7 @@ public class PortfolioTreePrinter extends Report {
     public void processPortfolio(PortfolioAccount aPortfolio) {
         aPortfolio.iterateElementsForReport(this);
         this.indentTemporaryResult();
-        result.add(aPortfolio.getName());
+        result.addFirst(aPortfolio.getName());
     }
 
     @Override
@@ -63,5 +63,9 @@ public class PortfolioTreePrinter extends Report {
         LinkedList<String> indentedNames = new LinkedList<>();
         result.forEach(aName -> indentedNames.add(" "+aName));
         result = indentedNames;
+    }
+
+    public LinkedList<String> yieldResult() {
+        return result;
     }
 }

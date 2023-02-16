@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added and finished NetTransferReport tests. 10/10 passed.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Reports/PortfolioDetailedTreePrinterTest.java" afterDir="false" />
+    <list default="true" id="375bf47d-0f37-4ca3-ab47-bb4a3b940835" name="Changes" comment="Added and finished PortfolioTreePrinter tests. 12/12 passed.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/modelo/Reports/PortfolioTreePrinterTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/PortfolioAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Accounts/ReceptiveAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Reports/AccountSummaryReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/AccountSummaryReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Reports/PortfolioDetailedTreePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/PortfolioDetailedTreePrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelo/Reports/AccountSummaryReportTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelo/Reports/AccountSummaryReportTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Reports/PortfolioTreePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Reports/PortfolioTreePrinter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +54,16 @@
       <recent name="modelo.Accounts" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountSummaryReportTest">
-    <configuration name="AccountSummaryReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in Servicios Finanacieros en Java">
+    <configuration name="All in Servicios Finanacieros en Java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioTreePrinterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -68,13 +72,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.AccountSummaryReportTest" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioTreePrinterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetTransferReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PortfolioTreePrinterTest.test10CanCreateAPortfolioTreePrinterForAPortfolioWithChildReceptiveAccountAndTheResultIsTheExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -83,44 +87,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.NetTransferReportTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortfolioDetailedTreePrinterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Reports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioDetailedTreePrinterTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortfolioDetailedTreePrinterTest.test08CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfolio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Servicios Finanacieros en Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelo.Reports.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioDetailedTreePrinterTest" />
-      <option name="METHOD_NAME" value="test08CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfolio" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioTreePrinterTest" />
+      <option name="METHOD_NAME" value="test10CanCreateAPortfolioTreePrinterForAPortfolioWithChildReceptiveAccountAndTheResultIsTheExpected" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PortfolioDetailedTreePrinterTest.test09CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfoliowithChildReceptiveAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PortfolioTreePrinterTest.test11CanCreateAPortfolioTreePrinterForAPortfolioWithTwoChildReceptiveAccountsAndTheResultIsTheExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Servicios Finanacieros en Java" />
       <extension name="coverage">
         <pattern>
@@ -129,8 +103,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelo.Reports" />
-      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioDetailedTreePrinterTest" />
-      <option name="METHOD_NAME" value="test09CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfoliowithChildReceptiveAccount" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioTreePrinterTest" />
+      <option name="METHOD_NAME" value="test11CanCreateAPortfolioTreePrinterForAPortfolioWithTwoChildReceptiveAccountsAndTheResultIsTheExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioTreePrinterTest.test12CanCreateAPortfolioTreePrinterForAPortfolioWithChildReceptiveAccountAndChildPortfolioAndTheResultIsTheExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Servicios Finanacieros en Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelo.Reports.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelo.Reports" />
+      <option name="MAIN_CLASS_NAME" value="modelo.Reports.PortfolioTreePrinterTest" />
+      <option name="METHOD_NAME" value="test12CanCreateAPortfolioTreePrinterForAPortfolioWithChildReceptiveAccountAndChildPortfolioAndTheResultIsTheExpected" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountSummaryReportTest" />
-        <item itemvalue="JUnit.NetTransferReportTest" />
-        <item itemvalue="JUnit.PortfolioDetailedTreePrinterTest" />
-        <item itemvalue="JUnit.PortfolioDetailedTreePrinterTest.test09CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfoliowithChildReceptiveAccount" />
-        <item itemvalue="JUnit.PortfolioDetailedTreePrinterTest.test08CanCreatePortfolioDetailedTreePrinterReportForAPortfolioWithChildPortfolio" />
+        <item itemvalue="JUnit.All in Servicios Finanacieros en Java" />
+        <item itemvalue="JUnit.PortfolioTreePrinterTest" />
+        <item itemvalue="JUnit.PortfolioTreePrinterTest.test12CanCreateAPortfolioTreePrinterForAPortfolioWithChildReceptiveAccountAndChildPortfolioAndTheResultIsTheExpected" />
+        <item itemvalue="JUnit.PortfolioTreePrinterTest.test11CanCreateAPortfolioTreePrinterForAPortfolioWithTwoChildReceptiveAccountsAndTheResultIsTheExpected" />
+        <item itemvalue="JUnit.PortfolioTreePrinterTest.test10CanCreateAPortfolioTreePrinterForAPortfolioWithChildReceptiveAccountAndTheResultIsTheExpected" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676482500597</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added and finished DetailedTreePrinted tests. 9/9 passed.">
+      <created>1676486654785</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676486654785</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +231,8 @@
     <MESSAGE value="Added and finished Transfer tests. 6/6 passed." />
     <MESSAGE value="Added and finished AccountSummaryReport tests. 13/13 passed." />
     <MESSAGE value="Added and finished NetTransferReport tests. 10/10 passed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added and finished NetTransferReport tests. 10/10 passed." />
+    <MESSAGE value="Added and finished DetailedTreePrinted tests. 9/9 passed." />
+    <MESSAGE value="Added and finished PortfolioTreePrinter tests. 12/12 passed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and finished PortfolioTreePrinter tests. 12/12 passed." />
   </component>
 </project>
